@@ -1,0 +1,81 @@
+// Media queries
+
+@media (max-width: 960px) {
+	ul#main-nav {
+		padding: 0 40px;
+	}
+	#main {
+		padding: 20px 40px;
+	}
+	#logo {
+		margin-left: 40px;
+	}
+	footer {
+		padding: 20px 40px;
+	}
+}
+
+@media (max-width: 850px) {
+	ul#main-nav {
+		padding: 0 40px;
+		li a {
+			padding: 5px 10px;
+		}	
+	}
+	#main {
+		padding: 20px 40px;
+	}
+	#logo {
+		margin-left: 40px;
+	}
+}
+
+@media (max-width: 570px) {
+	.columns {
+		.column1, .column2 {
+			float: none;
+			width: 100%;
+			padding: 0;
+		}
+	}
+	#mobile-menu-trigger {
+		display: block;
+		background: url(../img/menu-icon.png) 0 0 no-repeat;
+		height: 25px;
+		width: 25px;
+		text-indent: 500px;
+		overflow: hidden;
+		float: right;
+		margin: 10px 40px;
+		cursor: pointer;
+	}
+	ul#main-nav {
+		height: 0;
+		padding: 0;
+		border-top: 5px solid $red;
+		overflow: hidden;
+		&.open {
+			height: auto;
+			border-top: 5px solid $darkred;
+		}
+		li, li:first-child {
+			float: none;
+			border: 0;
+			border-bottom: 1px solid $darkred;
+			padding: 10px 40px;
+			&:hover {
+				background: $darkred;
+				ul {
+					position: static;
+					li {
+						padding-left: 20px;
+						&:before {
+							content: "> ";
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}

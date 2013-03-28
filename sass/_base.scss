@@ -1,0 +1,156 @@
+/* Base styles for responsive example site.
+==================================================== */
+
+// Apply a natural box layout model to all elements
+// http://paulirish.com/2012/box-sizing-border-box-ftw/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	background: #efefef;
+	color: $black;
+	font-family: 'Open Sans', sans-serif;
+}
+a {
+	color: $red;
+	text-decoration: none;
+	&:hover {
+		color: $darkred;
+	}
+}
+h1 {
+	color: $red;
+	margin-bottom: 0;
+	font-weight: 300;
+	font-size: 50px;
+}
+h2 {
+	margin-bottom: 0;
+	font-weight: 300;
+	font-size: 30px;
+}
+#logo {
+	background: url(../img/logo.png) 0 0 no-repeat;
+	height: 50px;
+	width: 162px;
+	text-indent: 500px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0 0 20px 100px;
+}
+#page-wrapper, footer {
+	width: 100%;
+	max-width: 1260px;
+	margin: 0 auto;
+	background: #fff;
+	-webkit-box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, .3);
+	box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, .3);
+}
+header {
+	padding: 20px 0;
+	border-top: 8px solid #2d2d2d;
+}
+
+footer {
+	background: #303030;
+	color: #666;
+	padding: 20px 100px;
+	text-align: right;
+	font-size: 80%;
+	a {
+		color: #fff;
+		&:hover { color: #ccc; }
+	}
+}
+
+// Main navigation
+#mobile-menu-trigger {
+	display: none;
+}
+ul#main-nav {
+	margin: 0;
+	padding: 0 100px;
+	background: $red;
+	@extend .clearfix;
+	li {
+		display: block;
+		float: left;
+		border-right: 1px solid $darkred;
+		&:first-child {
+			border-left: 1px solid $darkred;
+		}
+		a {
+			padding: 10px 30px;
+			display: inline-block;
+			color: #fff;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+		}
+		ul {
+			display: none;
+		}
+		&:hover {
+			background: $darkred;
+			ul {
+				display: block;
+				position: absolute;
+				z-index: 100;
+				background: $darkred;
+				margin: 0;
+				padding: 0;
+			}
+			li {
+				display: block;
+				float: none;
+				border: 0;
+				border-top: 1px solid $red;
+				&:last-child {
+					border-bottom: 1px solid $red;
+				}
+			}
+		}
+	}
+}
+
+// Main content
+#main {
+	padding: 20px 100px;
+}
+
+// Slideshow
+.slideshow {
+	margin-bottom: 40px;
+	width: 100% !important;
+	height: auto !important;
+	padding-bottom: 0;
+	img {
+		width: 100% !important;
+		padding-bottom: 10px;
+	}
+	&.enabled {
+		height: 0 !important;
+		padding-bottom: 41.67%; // Set visible height to a percentage of the width based on image ratio.
+		img {
+			height: auto !important;
+		}
+	}
+}
+
+// Columns
+.columns {
+	@extend .clearfix;
+	.column1, .column2 {
+		float: left;
+		width: 49.9%;
+	}
+	.column1 {
+		padding-right: 10px;
+	}
+	.column2 {
+		padding-left: 10px;
+	}
+	img {
+		max-width: 100%;
+	}
+	img.half {
+		max-width: 48%;
+	}
+}
