@@ -5,9 +5,10 @@ $(document).ready(function () {
 		$('#main-nav').toggleClass('open');
 	});
 
+	// Initialize slideshow
 	$('.slideshow').cycle().addClass('enabled');
 
-	// Functionality for destroying and enabling functionality based on browser width.
+	// Functionality for destroying and enabling slideshow based on browser width.
 	// Comment out slideshow initalization above before enabling this example.
 	/*
 
