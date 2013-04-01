@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Responsive Kittens</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="page-wrapper">
+
+            <header>
+
+                <div id="mobile-menu-trigger">Menu</div>
+
+                <h1 id="logo">ATOM</h1>
+
+                <ul id="main-nav">
+                    <li><a href="index.html">Example</a></li>
+                </ul>
+
+            </header>
+
+            <div id="main">
+
+                <h2>Media Queries</h2>
+
+                <p>CSS media queries can be used to define different styles based on window width.</p>
+                <p>The following example will display columns side-by-side on larger screens, but allow them to collapse into a single column on smaller screens.</p>
+<pre class="prettyprint lang-css">
+.columns {
+    @extend .clearfix;
+    .column1, .column2 {
+        float: left;
+        width: 49.9%; /* Less than 50%, because of IE bug. */
+    }
+    .column1 {
+        padding-right: 10px;
+    }
+    .column2 {
+        padding-left: 10px;
+    }
+    img {
+        max-width: 100%; /* Fit images to column width */
+    }
+    img.half {
+        max-width: 48%;
+    }
+}
+@media (max-width: 570px) {
+    .columns {
+        .column1, .column2 {
+            float: none;
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+</pre>
+
+                <h2>Responsive Height</h2>
+
+                <p>Sometimes it is necessary to set a fixed height on elements. For example, the jQuery Cycle plugin uses absolute positioning on slides within a slideshow, so the parent slide element must have a specific height to push down content below it. This can be problematic if you want the height to scale proportionally as the page gets narrower.</p>
+                <p>The following example applies a proportional height to the slideshow instead of a fixed height. The <code>!important</code> rule is used to override inline styles added by the plugin.</p>
+<pre class="prettyprint lang-css">
+.slideshow {
+    width: 100% !important;
+    height: 0 !important;
+    padding-bottom: 41.67%;
+    img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+</pre>
+
+                <h2>Javascript Manipulation</h2>
+
+                <p>When styles are not enough to achieve the desired functionality differences between large and small displays, you can used javascript to detect the page width and make additional modifications.</p>
+                <p>The following example uses the "destroy" method of the jQuery Cycle plugin to disassemble the slideshow when the browser is resized to a smaller width.</p>
+
+<pre class="prettyprint">
+// Initialize slideshow, but not for mobile.
+if ($(window).width() >= 570) {
+    $('.slideshow').cycle().addClass('enabled');
+}
+
+// Display slideshow as individual images on mobile.
+$(window).resize(function () {
+    var siteWidth = $(window).width();
+    if (siteWidth < 570 && $('.slideshow').hasClass('enabled')) {
+        $('.slideshow').cycle('destroy')
+            .removeAttr('style')
+            .removeClass('enabled')
+            .find('img').removeAttr('style');
+    } else if (siteWidth >= 570 && ! $('.slideshow').hasClass('enabled')) {
+        $('.slideshow').cycle().addClass('enabled');
+    }
+});
+</pre>
+
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li>Core HTML from HTML5 Boilerplate. <a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a></li>
+                    <li>SASS <a href="http://sass-lang.com/">http://sass-lang.com/</a></li>
+                    <li>Fonts from Google Web Fonts <a href="http://www.google.com/fonts/">http://www.google.com/fonts/</a></li>
+                    <li>jQuery Cycle plugin for slideshow <a href="http://www.malsup.com/jquery/cycle/">http://www.malsup.com/jquery/cycle/</a></li>
+                    <li>Placeholder cupcake text <a href="http://cupcakeipsum.com/">http://cupcakeipsum.com/</a></li>
+                    <li>Placeholder kitten images <a href="http://placekitten.com/">http://placekitten.com/</a></li>
+                </ul>
+
+
+            </div><!-- / #main -->
+
+        </div><!-- / #page-wrapper -->
+
+        <footer>
+            <p><a href="http://theatomgroup.com/" target="_blank">The Atom Group</a> | T: 603.501.0003 | F: 888.805.3583</p>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery.cycle.all.js"></script>
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <script src="js/vendor/google-code-prettify/lang-css.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

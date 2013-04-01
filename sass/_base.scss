@@ -27,6 +27,12 @@ h2 {
 	margin-bottom: 0;
 	font-weight: 300;
 	font-size: 30px;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+code {
+	color: $red;
 }
 #logo {
 	background: url(../img/logo.png) 0 0 no-repeat;
@@ -112,7 +118,7 @@ ul#main-nav {
 
 // Main content
 #main {
-	padding: 20px 100px;
+	padding: 20px 100px 50px 100px;
 }
 
 // Slideshow
