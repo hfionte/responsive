@@ -25,10 +25,8 @@ $(document).ready(function () {
 				.removeAttr('style')
 				.removeClass('enabled')
 				.find('img').removeAttr('style');
-			console.log("destroy slideshow");
 		} else if (siteWidth >= 570 && ! $('.slideshow').hasClass('enabled')) {
 			$('.slideshow').cycle().addClass('enabled');
-			console.log("build slideshow");
 		}
 	});
 	

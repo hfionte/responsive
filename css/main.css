@@ -199,7 +199,7 @@ a {
 
 h1 {
   color: #e31936;
-  margin-bottom: 0;
+  margin: 0;
   font-weight: 300;
   font-size: 50px; }
 
@@ -231,7 +231,7 @@ code {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); }
 
 header {
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   border-top: 8px solid #2d2d2d; }
 
 footer {
@@ -286,7 +286,7 @@ ul#main-nav {
   padding: 20px 100px 50px 100px; }
 
 .slideshow {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: 100% !important;
   height: auto !important;
   padding-bottom: 0; }
