@@ -17,4 +17,3 @@ Features
 * Images remain full width or half width as columns scale
 * Menu resizes and converts into expanding mobile menu
 * Slideshow stays 100% width and uses padding-bottom percentage to maintain height ratio
-* Optional (commented out) slideshow destroy and rebuild at a breakpoint
