@@ -192,13 +192,13 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 a {
-  color: #e31936;
+  color: #008ab3;
   text-decoration: none; }
   a:hover {
-    color: #9e1327; }
+    color: #125f7b; }
 
 h1 {
-  color: #e31936;
+  color: #008ab3;
   margin: 0;
   font-weight: 300;
   font-size: 50px; }
@@ -211,12 +211,12 @@ h2 {
     margin-top: 0; }
 
 code {
-  color: #e31936; }
+  color: #008ab3; }
 
 #logo {
   background: url(../img/logo.png) 0 0 no-repeat;
-  height: 50px;
-  width: 162px;
+  height: 59px;
+  width: 143px;
   text-indent: 500px;
   overflow: hidden;
   padding: 0;
@@ -251,13 +251,13 @@ footer {
 ul#main-nav {
   margin: 0;
   padding: 0 100px;
-  background: #e31936; }
+  background: #008ab3; }
   ul#main-nav li {
     display: block;
     float: left;
-    border-right: 1px solid #9e1327; }
+    border-right: 1px solid #125f7b; }
     ul#main-nav li:first-child {
-      border-left: 1px solid #9e1327; }
+      border-left: 1px solid #125f7b; }
     ul#main-nav li a {
       padding: 10px 30px;
       display: inline-block;
@@ -266,21 +266,21 @@ ul#main-nav {
     ul#main-nav li ul {
       display: none; }
     ul#main-nav li:hover {
-      background: #9e1327; }
+      background: #125f7b; }
       ul#main-nav li:hover ul {
         display: block;
         position: absolute;
         z-index: 100;
-        background: #9e1327;
+        background: #125f7b;
         margin: 0;
         padding: 0; }
       ul#main-nav li:hover li {
         display: block;
         float: none;
         border: 0;
-        border-top: 1px solid #e31936; }
+        border-top: 1px solid #008ab3; }
         ul#main-nav li:hover li:last-child {
-          border-bottom: 1px solid #e31936; }
+          border-bottom: 1px solid #008ab3; }
 
 #main {
   padding: 20px 100px 50px 100px; }
@@ -354,18 +354,18 @@ ul#main-nav {
   ul#main-nav {
     height: 0;
     padding: 0;
-    border-top: 5px solid #e31936;
+    border-top: 5px solid #008ab3;
     overflow: hidden; }
     ul#main-nav.open {
       height: auto;
-      border-top: 5px solid #9e1327; }
+      border-top: 5px solid #125f7b; }
     ul#main-nav li, ul#main-nav li:first-child {
       float: none;
       border: 0;
-      border-bottom: 1px solid #9e1327;
+      border-bottom: 1px solid #125f7b;
       padding: 10px 40px; }
       ul#main-nav li:hover, ul#main-nav li:first-child:hover {
-        background: #9e1327; }
+        background: #125f7b; }
         ul#main-nav li:hover ul, ul#main-nav li:first-child:hover ul {
           position: static; }
           ul#main-nav li:hover ul li, ul#main-nav li:first-child:hover ul li {
@@ -518,7 +518,6 @@ ul#main-nav:after,
 
   @page {
     margin: 0.5cm; }
-
   p,
   h2,
   h3 {

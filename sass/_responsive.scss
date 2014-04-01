@@ -52,19 +52,19 @@
 	ul#main-nav {
 		height: 0;
 		padding: 0;
-		border-top: 5px solid $red;
+		border-top: 5px solid $main;
 		overflow: hidden;
 		&.open {
 			height: auto;
-			border-top: 5px solid $darkred;
+			border-top: 5px solid $mainDark;
 		}
 		li, li:first-child {
 			float: none;
 			border: 0;
-			border-bottom: 1px solid $darkred;
+			border-bottom: 1px solid $mainDark;
 			padding: 10px 40px;
 			&:hover {
-				background: $darkred;
+				background: $mainDark;
 				ul {
 					position: static;
 					li {

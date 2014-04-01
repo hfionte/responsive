@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Responsive Layout Basics</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="page-wrapper">
+
+            <header>
+
+                <div id="mobile-menu-trigger">Menu</div>
+
+                <h1 id="logo">Bōwst</h1>
+
+                <ul id="main-nav">
+                    <li><a href="basics.html" target="_blank">The Basics</a></li>
+                    <li><a href="notes.html" target="_blank">Techniques</a></li>
+                    <li><a href="index.html" target="_blank">Example: Responsive Kittens</a></li>
+                </ul>
+
+            </header>
+
+            <div id="main">
+
+                <h1>Responsive Layout with Media Queries</h1>
+
+                <p>Historically, many webpages were built to be an exact width, such as 960px wide. This allowed designers to create layouts that fit exactly within that size, and did not need to worry about the content not fitting within the layout. But in the modern world where users will browse on your site with screens ranging from a 4-inch smartphone to a 23-inch monitor (or larger), your site needs to respond gracefully to all situations.</p>
+
+                <p>A "responsive layout" is a page layout that is flexible and responds naturally to the page width. A page that is built using a responsive layout will look good on a variety of screen sizes, including both desktop and mobile devices.</p>
+
+                <p>Making a web page responsive is easy if you use two techniques:</p>
+                <ol>
+                    <li>Percentage widths</li>
+                    <li>Media queries</li>
+                </ol>
+
+                <h2>Percentage Widths</h2>
+
+                <p>Instead of specifying pixel-widths on elements, it is better to use percentages. In CSS, the percentage will be relative to the parent element. In the example below, columns have been set to be about 50%, so that they will fit two-across. Images have been set with a max width of 100% so that as the page scales down, they will never be wider than their container.</p>
+
+
+<pre class="prettyprint lang-css">
+.column {
+    float: left;
+    width: 49.9%; /* Less than 50%, because of IE bug. */
+}
+img {
+    max-width: 100%; /* Fit images to column width */
+}
+</pre>
+
+                <h2>Media Queries</h2>
+
+                <p>You can get a lot done by simply using percentage widths in your layout, but at some point the browser will be too narrow to display columns nicely. At that point, you want to make everything display in one wider column. By using media queries, you do not need to change any of your HTML to display on small screens, you just need to re-style the content to fit better. Media queries are used to override the initial styles on an element only at specific browser widths. In the following example, when the browser is 570px or less, columns are set to 100% width and the float is removed.</p>
+
+<pre class="prettyprint lang-css">
+@media (max-width: 570px) {
+    .column {
+        float: none;
+        width: 100%;
+    }
+}
+</pre>
+
+            </div><!-- / #main -->
+
+        </div><!-- / #page-wrapper -->
+
+        <footer>
+            <p><a href="http://www.bowst.com/" target="_blank">Bōwst</a> | T: 603-766-8600 | info@bowst.com</p>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery.cycle.all.js"></script>
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <script src="js/vendor/google-code-prettify/lang-css.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

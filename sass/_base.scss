@@ -11,14 +11,14 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 a {
-	color: $red;
+	color: $main;
 	text-decoration: none;
 	&:hover {
-		color: $darkred;
+		color: $mainDark;
 	}
 }
 h1 {
-	color: $red;
+	color: $main;
 	margin: 0;
 	font-weight: 300;
 	font-size: 50px;
@@ -32,12 +32,12 @@ h2 {
 	}
 }
 code {
-	color: $red;
+	color: $main;
 }
 #logo {
 	background: url(../img/logo.png) 0 0 no-repeat;
-	height: 50px;
-	width: 162px;
+	height: 59px;
+	width: 143px;
 	text-indent: 500px;
 	overflow: hidden;
 	padding: 0;
@@ -75,14 +75,14 @@ footer {
 ul#main-nav {
 	margin: 0;
 	padding: 0 100px;
-	background: $red;
+	background: $main;
 	@extend .clearfix;
 	li {
 		display: block;
 		float: left;
-		border-right: 1px solid $darkred;
+		border-right: 1px solid $mainDark;
 		&:first-child {
-			border-left: 1px solid $darkred;
+			border-left: 1px solid $mainDark;
 		}
 		a {
 			padding: 10px 30px;
@@ -94,12 +94,12 @@ ul#main-nav {
 			display: none;
 		}
 		&:hover {
-			background: $darkred;
+			background: $mainDark;
 			ul {
 				display: block;
 				position: absolute;
 				z-index: 100;
-				background: $darkred;
+				background: $mainDark;
 				margin: 0;
 				padding: 0;
 			}
@@ -107,9 +107,9 @@ ul#main-nav {
 				display: block;
 				float: none;
 				border: 0;
-				border-top: 1px solid $red;
+				border-top: 1px solid $main;
 				&:last-child {
-					border-bottom: 1px solid $red;
+					border-bottom: 1px solid $main;
 				}
 			}
 		}
